@@ -33,25 +33,28 @@
 					</div>-->
 
 					<button type = "submit" id = "submit" class = "btn btn-info">Submit</button>
-					<p id = "display"></p>
 				</form>
 			</div>
 		</div>
 		<script>
-		$(document).ready(function(){		
-		var x, budget, date;
+		$(document).ready(function(){
+		$("#submit").on('click', function(){
+			alert('submitted');
+		});		
+		/*var x, budget, date;
 		x = document.getElementById("form1");
 		budget = x.elements["budget"].value;
 		document.getElementById("display").innerHTML = budget + " is your budget.";
-		alert('submitted');
-		document.write("abc");
+		
+		document.write("abc");*/
 		});
 		</script>
 
 		<div class = "container">
 			<div class = "span12">
 				<div class = "events">
-					<h4>Results...?!!!!</h4>
+					<h4>Results...?</h4>
+					<p id = "display"></p>
 					<ul></ul>
 				</div>
 			</div>
