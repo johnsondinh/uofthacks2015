@@ -15,9 +15,8 @@ $(document).ready(function() {
 				$(data).find('viewentry').each(function() {
 					var name = $(this).find('entrydata[name = EventName]').text();
 					var cost = $(this).find('entrydata[name = Admission]').text();
-					var printName: 'Title: ' + name;
 
-					$('.events ul').append($('<li/>', {text: printName}));
+					$('.events ul').append($('<li/>', {text: name}, {text: cost}));
 				});
 			},
 			error: function() {
