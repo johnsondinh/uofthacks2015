@@ -53,7 +53,7 @@ $(document).ready(function() {
 						var desc = $(this).find('entrydata[name = LongDesc]').text();
 						var organization = $(this).find('entrydata[name = PresentedByOrgName]').text();
 
-						$(".events ul").append('<strong>' + name + '</strong>, presented by: ' + );
+						$(".events ul").append('<strong>' + name + '</strong>, presented by: ' + organization);
 						$(".events ul").append('<strong>Presented by: ' + organization + '</strong>');
 						$(".events ul").append('<h4>' + cost + '</h4>');
 						$(".events ul").append('<h4>' + desc + '</h4>');
