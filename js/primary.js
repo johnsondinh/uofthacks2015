@@ -12,12 +12,12 @@ $.ajax({
 });
 
 $(document).ready(function() {
-	$("submit").on('click', function(){
+	$("#submit").on('click', function(){
 		alert("Submitted!");
 	});
 	var budget, date;
 	budget = document.getElementById("form1").elements["budget"].value;
-	date = document.getElementById("form2").elements["date"].value;
+	//date = document.getElementById("form2").elements["date"].value;
 
 	document.getElementById("display").innerHTML = budget + " is your budget.";
 });
