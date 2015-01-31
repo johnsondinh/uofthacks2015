@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$("#submit1").on('click', function(event) {
+	$("#submit1").on('click', function(event, data) {
 		var x, budget, date, y, budget2, month2, date2;
 		x = document.getElementById("form1");
 		budget = x.elements["budget"].value;
@@ -7,7 +7,17 @@ $(document).ready(function() {
 		document.getElementById("displayBudget").innerHTML = '$' + budget + '.00';
 		document.getElementById("displayDate").innerHTML = date;
 		event.preventDefault();
-	});		
+
+		$(data).find('viewentries viewentry').each(function() {
+			var entry = $(this).find(['name = EventName']).text();
+
+			$('.results ul').append(
+				$('<li/>', {
+					text: entry
+				})
+			);
+		});
+	});
 });
 
 $.ajax({
