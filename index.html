@@ -18,6 +18,19 @@
 				<h1>Day Out: Plan Your Day</h1>
 				<a class = "btn btn-info">Click here to begin!</a>
 			</div>
+			<form id>
+				<div class = "form-group">
+					<label>Budget</label>
+					<input class = "form-control" id = "form1" placeholder = "Enter budget: ">
+				</div>
+
+				<div class = "form-group">
+					<label>Date</label>
+					<input class = "form-control" id = "form2" placeholder = "Enter date: ">
+				</div>
+
+				<button type = "submit" class = "btn btn-info" onclick = "nothing()">Submit</button>
+			</form>
 		</div>
 
 
@@ -33,22 +46,12 @@
 		<script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script src = "js/bootstrap.js"></script>
 		<script src = "js/primary.js"></script>
-
-		<form id = "form1">
-			Budget:<br>
-			<input name = "budget" type = "text" size = "20">
-			<br>
-			Date:<br>
-			<input name = "date" type = "text" size = "20">
-		</form>
-	
-		<button onclick = nothing()">Submit</button>
 	
 		<script>
-			function nothing(){
-			var budget, date;
-			budget = document.getElementById("form1").elements["budget"].value;
-			date = document.getElementById("form2").elements["date"].value;
+			function nothing() {
+				var budget, date;
+				budget = document.getElementById("form1").elements["budget"].value;
+				date = document.getElementById("form2").elements["date"].value;
 			}
 		</script>
 	
