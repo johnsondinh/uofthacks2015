@@ -28,14 +28,18 @@ $(document).ready(function() {
 					var priceCheck = 1;
 					budget = budget.replace("$", "");
 					budget = parseInt(budget, 10);
+					$('.events ul').append($('<li/>', {text: "budget = " + budget + "<br>"));
 					if (checks){	
 						if (parseCost[0] == ""){
+						    $('.events ul').append($('<li/>', {text: "parseCost[0]<br>"));
 							priceCheck = 1;
 						}
-						else if (parseCost.length >= 1){  //check if it's one number or a range
+						else{ 
+						    $('.events ul').append($('<li/>', {text: "else<br>"));
 							var lowerBound = parseCost[0].replace("$","");
 							lowerBound = lowerBound.replace("+","");
 							lowerBound = parseInt(lowerBound,10);
+							$('.events ul').append($('<li/>', {text: "lowerBound = " + lowerBound + "<br>"));
 							if(lowerBound >= budget){
 								priceCheck = 0;
 							}
