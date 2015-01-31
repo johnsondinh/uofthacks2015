@@ -25,7 +25,8 @@ $(document).ready(function() {
 					}
 					var cost = $(this).find('entrydata[name = Admission]').text();
 					var parsedCost = cost.split("-");
-					if (!(parsedCost[0]) && !(parsedCost[1]) && checks){	
+					
+					if (checks){	
 						$('.events ul').append($('<li/>', {text: name}));
 					}
 					
