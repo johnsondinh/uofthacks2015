@@ -11,9 +11,9 @@ $.ajax({
 	}
 });
 
-$(function() {
-	$(".btn btn-info").click(function() {
-		alert(1);
+$(document).ready(function() {
+	$("form").submit(function() {
+		alert("Submitted!");
 	});
 });
 
@@ -23,4 +23,4 @@ function nothing() {
 	budget = document.getElementById("form1").elements["budget"].value;
 	date = document.getElementById("form2").elements["date"].value;
 	alert(1);
-}*/
+}*/)
