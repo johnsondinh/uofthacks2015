@@ -11,11 +11,11 @@ $.ajax({
 	}
 });
 
-
-function nothing() {
-	var budget, date;
-	budget = document.getElementById("form1").elements["budget"].value;
-	date = document.getElementById("form2").elements["date"].value;
-
-	alert(1);
-};
+$(function() {
+	$("button#submit").click(function(){
+	   	$.ajax({
+		   	var budget = document.getElementById("form1").elements["budget"].value;
+		   	var date = document.getElementById("form2").elements["date"].value;
+		   	alert(1);
+	});
+});
