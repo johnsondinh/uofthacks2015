@@ -33,5 +33,21 @@
 		<script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script src = "js/bootstrap.js"></script>
 		<script src = "js/primary.js"></script>
+
+		<form id = "form1">
+			Budget: <input name = "budget" type = "text" size = "20">
+			Date: <inpt name = "date" type = "text" size = "20">
+		</form>
+	
+		<button onclick = nothing()">Submit</button>
+	
+		<script>
+			function nothing(){
+			var budget, date;
+			budget = document.getElementById("form1").elements["budget"].value;
+			date = document.getElementById("form1").elements["date"].value;
+			}
+		</script>
+	
 	</body>
 </html>
