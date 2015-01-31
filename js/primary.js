@@ -28,30 +28,20 @@ $(document).ready(function() {
 					var priceCheck = 1;
 					if (checks){	
 						if (parseCost[0] == ""){
-							$('.events ul').append($('<li/>', {text: name + cost}));
 							priceCheck = 1;
 						}
-						else if (parseCost.length == 1){  //check if it's one number or a range
-							if(budget <= parseCost[0]){
-								priceCheck = 1;
-							}
-							else{
+						else if (parseCost.length >= 1){  //check if it's one number or a range
+							var lowerBound = parseCost[0].replace("$","");
+							var lowerBound = lowerBound.replace("+","");
+							var floatNumber = lowerBound.parseFloat(lowerBound);
+							if(floatNumber >= budget){
 								priceCheck = 0;
 							}
 						}
-						else{
-							if (budget <= parseCost[1]){
-								priceCheck = 1;
-							}
-							else{
-								priceCheck = 0;
-							}
-						}
-						
 					}
-					/*if (checks && priceCheck){
+					if (checks && priceCheck){
 						$('.events ul').append($('<li/>', {text: name + cost}));
-					}*/
+					}
 					
 				});
 			},
