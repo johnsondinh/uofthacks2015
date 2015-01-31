@@ -4,7 +4,8 @@ $.ajax({
 	success: function(data) {
 		$(data).find('viewentries viewentry').each(function() {
 
-			var entry = $(this).find('viewentry[position = 1]').text();
+			var entry = $(this).entrydata.attr('name');
+			//var eventName = $entry>text;
 
 			$('.events ul').append($('<li />', {
 				text: entry
