@@ -56,9 +56,10 @@ $(document).ready(function() {
 							cost = "No pricing available.";
 						}
 
-						$('.events ul').append($('<strong/>', {text: name}));
-						$('.events ul').append($('<p style = "font-size: 11px"/>', {text: desc}));
-						$('.events ul').append($('<p style = "font-size: 11px"/>', {text: cost}));
+						$('.events ul').append($('<h3/>', {text: name}));
+						$('.events u1').append(' | ');
+						$('.events ul').append($({text: cost}));
+						$('.events ul').append($('<p/>', {text: desc}));
 					}
 				});
 			},
