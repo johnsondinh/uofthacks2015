@@ -50,8 +50,15 @@ $(document).ready(function() {
 					}
 
 					if (checks && priceCheck) {
+						var desc = $(this).find('entrydata[name = LongDesc]').text();
+
+						if(cost == '') {
+							cost = 'No pricing available.';
+						}
+
 						$('.events ul').append($('<p/>', {text: name}));
-						$('.events ul').append($('<ul/>', {text: cost}));
+						$('.events ul').append($('<p/>', {text: desc}));
+						$('.events ul').append($('<li/>', {text: cost}));
 					}
 				});
 			},
