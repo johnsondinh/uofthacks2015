@@ -24,11 +24,10 @@ $(document).ready(function() {
 						checks = 0;
 					}
 					var cost = $(this).find('entrydata[name = Admission]').text();
-					var parsedCost = cost.split('-');
+					var parseCost = cost.split('-');
 					var priceCheck;
 					if (checks){	
 						if (parseCost[0] == ""){
-							$('.events ul').append($('<li/>', {text: name}));
 							priceCheck = 1;
 						}
 						else if (parseCost.length == 1){  //check if it's one number or a range
