@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 $.ajax({
 	url: 'xml/events.xml',
 	dataType: 'xml',
@@ -19,4 +17,3 @@ $.ajax({
 		$('.events').text('Failed to get data!');
 	}
 });
->>>>>>> 7e91f23c4dd2255f8c0412c99054658db76d2c8d
