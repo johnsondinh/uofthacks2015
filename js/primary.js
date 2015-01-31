@@ -56,7 +56,9 @@ $(document).ready(function() {
 							cost = "No pricing available.";
 						}
 
-						$(".events ul").append('<strong><a href="#">YOLO</a></strong>');
+						$(".events ul").append('<strong><h3>' + name + '</h3></strong>');
+						$(".events ul").append('<br><h4>' + cost + '</h4>');
+						$(".events ul").append('<br><p>' + desc + '</p>');
 					}
 				});
 			},
