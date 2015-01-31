@@ -17,38 +17,41 @@ $(document).ready(function() {
 					var name = $(this).find('entrydata[name = EventName]').text();
 					var date_start = $(this).find('entrydata[name = DateBeginShow]').text();
 					var date_end = $(this).find('entrydata[name = DateEndShow]').text();
+
 					var date_start1 = new Date(date_start);
 					var date_start2 = new Date(date_end);
 					var userDate = new Date(date);
+
 					if (!((userDate.getTime() >= date_start1.getTime()) && (userDate.getTime() <= date_start2.getTime()))){
 						checks = 0;
 					}
+
 					var cost = $(this).find('entrydata[name = Admission]').text();
 					var parseCost = cost.split('-');
 					var priceCheck = 1;
-					budget = budget.replace("$", "");
+
+					budget = budget.replace(/$/g, "");
 					budget = parseInt(budget, 10);
-					$('.events ul').append($('<li/>', {text: "budget = " + budget + "<br>"));
-					if (checks){	
-						if (parseCost[0] == ""){
-						    $('.events ul').append($('<li/>', {text: "parseCost[0]<br>"));
+
+					if (checks) {	
+						if (parseCost[0] == "") {
 							priceCheck = 1;
 						}
-						else{ 
-						    $('.events ul').append($('<li/>', {text: "else<br>"));
-							var lowerBound = parseCost[0].replace("$","");
-							lowerBound = lowerBound.replace("+","");
-							lowerBound = parseInt(lowerBound,10);
-							$('.events ul').append($('<li/>', {text: "lowerBound = " + lowerBound + "<br>"));
-							if(lowerBound >= budget){
+
+						else{
+							var lowerBound = parseCost[0].replace(/$/g, "");
+							lowerBound = lowerBound.replace(/+/g, "");
+							lowerBound = parseInt(lowerBound, 10);
+
+							if(lowerBound > budget) {
 								priceCheck = 0;
 							}
 						}
 					}
-					if (checks && priceCheck){
+
+					if (checks && priceCheck) {
 						$('.events ul').append($('<li/>', {text: name + cost}));
-					}
-					
+					}	
 				});
 			},
 			error: function() {
