@@ -12,16 +12,14 @@ $(document).ready(function() {
 			url: 'xml/events.xml',
 			dataType: 'xml',
 			success: function(data) {
-				alert(1);
 				$(data).find('viewentries viewentry').each(function() {
-					var entry = $(this).find('entrydata[name = EventName]').text();
+					var entry = $(this).find("entrydata[name = 'EventName']").text();
 
 					$('.events jumbotron ul').append($('<li/>', {text: entry}));
 				});
 			},
 			error: function() {
 				$('.events').text('Failed to get data!');
-				alert(2);
 			}
 		});
 	});		
