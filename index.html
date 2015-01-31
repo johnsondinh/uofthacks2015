@@ -25,17 +25,19 @@
 					<div class = "form-group">
 						<label>Budget</label>
 						<input type = "number" class = "form-control" id = "budget" placeholder = "Enter budget: ">
+						<div class="help-block with-errors"></div>
 						<label>Date</label>
 						<input class = "form-control" id = "date" placeholder = "Enter date: ">
 					</div>
 				</form>
 				
-				<form class="form-inline">
+				<form id = "form2" class="form-inline">
 					<div class="form-group">
 						<label>Budget</label>
 							<input type = "number" class = "form-control" id = "budget" placeholder = "Enter budget: ">
+							<div class="help-block with-errors"></div>
 						<label>Date</label>
-							<select class = "form-control">
+							<select id = month class = "form-control">
 							  <option>1</option>
 							  <option>2</option>
 							  <option>3</option>
@@ -50,7 +52,7 @@
 							  <option>12</option>
 							</select>
 
-							<select class = "span1">
+							<select id = date class = "span1">
 							  <option>1</option>
 							  <option>2</option>
 							  <option>3</option>
@@ -84,21 +86,24 @@
 							  <option>31</option>
 							</select>
 					</div>
-					<button type = "submit" id = "submit1" class = "btn btn-info">Submit</button>
 				</form>
-				
+				<button type = "submit" id = "submit1" class = "btn btn-info">Submit</button>
 			</div>
 		</div>
 		
 		<script>
 		$(document).ready(function(){
 			$("#submit1").on('click', function(event){
-				var x, budget, date;
+				var x, budget, date, y, budget2, month2, date2;
 				x = document.getElementById("form1");
 				budget = x.elements["budget"].value;
 				date = x.elements["date"].value;
-				document.getElementById("displayB").innerHTML = budget;
-				document.getElementById("displayD").innerHTML += date;
+				y = document.getElementById("form2");
+				budget2 = y.elements["budget"].value;
+				month2 = y.elements["month"].value;
+				date2 = y.elements["date"].value;
+				document.getElementById("displayB").innerHTML = budget + " : " + budget2;
+				document.getElementById("displayD").innerHTML += date + " : " + month2 + "/" + date2;
 				event.preventDefault();
 				/*alert(budget);*/
 			});		
