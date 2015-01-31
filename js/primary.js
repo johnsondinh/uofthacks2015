@@ -30,7 +30,7 @@ $(document).ready(function() {
 					var parseCost = cost.split('-');
 					var priceCheck = 1;
 
-					budget = budget.replace('$', '');
+					budget = budget.replace(/\$/g, '');
 					budget = parseInt(budget, 10);
 
 					if (checks) {	
@@ -39,8 +39,8 @@ $(document).ready(function() {
 						}
 
 						else{
-							var lowerBound = parseCost[0].replace('$', '');
-							lowerBound = lowerBound.replace('+', '');
+							var lowerBound = parseCost[0].replace(/\$/g, '');
+							lowerBound = lowerBound.replace(/\+/g, '');
 							lowerBound = parseInt(lowerBound, 10);
 
 							if(lowerBound > budget) {
@@ -51,7 +51,7 @@ $(document).ready(function() {
 
 					if (checks && priceCheck) {
 						$('.events ul').append($('<li/>', {text: name + cost}));
-					}	
+					}
 				});
 			},
 			error: function() {
