@@ -29,7 +29,7 @@
 						<input class = "form-control" id = "date" placeholder = "Enter date: ">
 					</div>
 
-					<button type = "submit" id = "submit1" class = "btn btn-info">Submit</button>
+					<input type = "submit" id = "submit1" class = "btn btn-info">Submit</button>
 				</form>
 			</div>
 		</div>
@@ -41,8 +41,8 @@
 				x = document.getElementById("form1");
 				budget = x.elements["budget"].value;
 				date = x.elements["date"].value;
-				document.getElementById("displayB").innerHTML = budget + " is your budget.<br>";
-				document.getElementById("displayD").innerHTML += date + " is your date.";
+				document.getElementById("displayB").innerHTML = budget;
+				document.getElementById("displayD").innerHTML += date;
 				/*alert(budget);*/
 			});		
 		});
