@@ -50,7 +50,8 @@ $(document).ready(function() {
 					}
 
 					if (checks && priceCheck) {
-						$('.events ul').append($('<li/>', {text: name + cost}));
+						$('.events ul').append($('<p/>', {text: name}));
+						$('.events ul').append($('<li/>', {text: cost}));
 					}
 				});
 			},
