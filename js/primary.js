@@ -3,6 +3,8 @@ $(document).ready(function() {
 		var x, budget, date;
 		x = document.getElementById("form1");
 		budget = x.elements["budget"].value;
+		budget = budget.replace(/\$/g, '');
+		budget = parseInt(budget, 10);
 		date = x.elements["date"].value;
 		document.getElementById("displayBudget").innerHTML = '$' + budget + '.00';
 		document.getElementById("displayDate").innerHTML = date;
@@ -28,17 +30,9 @@ $(document).ready(function() {
 
 					var cost = $(this).find('entrydata[name = Admission]').text();
 					var parseCost = cost.split('-');
-					var priceCheck = 1;
+					var priceCheck = 1;					
 
-					$('.events u1').append('JUST TELL ME WHY');
-					$('.events ul').append($({text: budget}));
-
-					budget = budget.replace(/\$/g, '');
-					budget = parseInt(budget, 10);
-
-					$('.events ul').append($({text: budget}));
-
-					/*if (checks) {	
+					if (checks) {	
 						if (parseCost[0] == "") {
 							priceCheck = 1;
 						}
@@ -56,7 +50,7 @@ $(document).ready(function() {
 
 					if (checks && priceCheck) {
 						$('.events ul').append($('<li/>', {text: name + cost}));
-					}*/
+					}
 				});
 			},
 			error: function() {
