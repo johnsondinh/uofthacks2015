@@ -21,10 +21,10 @@
 				<h1>Day Out: Plan Your Day</h1>
 				<p>Enter your budget and the date below. We will list some cool events in Toronto that you might want to check out. All of these festivals and events are fetched directly from the City of Toronto website.</p>
 				
-				<form action = "">
+				<form action = "" id = "form1">
 					<div class = "form-group">
 						<label>Budget</label>
-						<input class = "form-control" id = "form1" placeholder = "Enter budget: ">
+						<input class = "form-control" id = "budget" placeholder = "Enter budget: ">
 					</div>
 
 					<!--<div class = "form-group">
@@ -32,15 +32,17 @@
 						<input class = "form-control" id = "form2" placeholder = "Enter date: ">
 					</div>-->
 
-					<button type = "submit" id = "submit" class = "btn btn-info">Submit</button>
+					<button type = "submit" id = "submit1" class = "btn btn-info">Submit</button>
 				</form>
 			</div>
 		</div>
 		<script>
 		$(document).ready(function(){
-		$("#submit").on('click', function(){
+		$("#submit1").on('click', function(){
 			var x, budget, date;
 			x = document.getElementById("form1");
+			budget = x.elements["budget"].value;
+			document.getElementById("display").innerHTML = budget + " is your budget.";
 			alert('submitted');
 		});		
 		/*var x, budget, date;
