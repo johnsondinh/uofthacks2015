@@ -3,19 +3,17 @@ $.ajax({
 	dataType: 'xml',
 	success: function(data) {
 		$(data).find('viewentries viewentry').each(function() {
-			// Do nothing.
-		}		
+			// Empty.
+		});
 	},
 	error: function() {
 		$('.events').text('Failed to get data!');
 	}
 });
 
-
-$('#submit').on('click', function(e) {
+function nothing() {
 	var budget, date;
 	budget = document.getElementById("form1").elements["budget"].value;
 	date = document.getElementById("form2").elements["date"].value;
-
-	document.getElementById("display").innerHTML = budget + " is your budget.";
-};
+	alert(1);
+}
