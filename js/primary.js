@@ -1,5 +1,5 @@
 $.ajax({
-	url: 'xml/events.xml',
+	url: 'xml/events.xmll',
 	dataType: 'xml',
 	success: function(data) {
 		$(data).find('viewentries viewentry').each(function() {
