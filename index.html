@@ -37,12 +37,11 @@
 			</div>
 		</div>
 		<script>
-		$(document).ready(function(){
-		document.write("abc");
-		alert('submitted');
+		$(document).ready(function(){		
 		var budget, date;
 		budget = document.getElementById("form1").elements["budget"].value;
 		document.getElementById("display").innerHTML = budget + " is your budget.";
+		alert('submitted');
 		document.write("abc");
 		});
 		</script>
@@ -55,7 +54,7 @@
 				</div>
 			</div>
 		</div>
-
+		<p id = "display"></p>
 		
 		<script src = "js/primary.js"></script>
 	
