@@ -18,7 +18,7 @@ $(document).ready(function() {
 					var date_start = $(this).find('entrydata[name = DateBeginShow]');
 					var date_end = $(this).find('entrydata[name = DateEndShow]');
 					var date_start1 = new Date(date_start);
-					var date_start2 = new Date(date_start);
+					var date_start2 = new Date(date_end);
 					if (date >= date_start1 && date <= date_start2){
 						$('.events ul').append($('<li/>', {text: name + cost}));
 					}
