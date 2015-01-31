@@ -56,8 +56,14 @@ $(document).ready(function() {
 							cost = "No pricing available.";
 						}
 
-						$('.events ul').append($('<h3/><strong/>')).text(name);
-						//$('.events ul').append($('<p/>', {text: desc}));
+						$('.events ul').append($('<h3/>'));
+						$('.events ul h3').text(name);
+
+						$('.events ul').append($('<h4/>'));
+						$('.events ul h3').text(cost);
+
+						$('.events ul').append($('<p/>'));
+						$('.events ul h3').text(desc);
 					}
 				});
 			},
