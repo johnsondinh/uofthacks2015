@@ -13,17 +13,22 @@ $(document).ready(function() {
 			dataType: 'xml',
 			success: function(data) {
 				$(data).find('viewentry').each(function() {
+					var checks = 1;
 					var name = $(this).find('entrydata[name = EventName]').text();
-					//var cost = $(this).find('entrydata[name = Admission]').text();
 					var date_start = $(this).find('entrydata[name = DateBeginShow]').text();
 					var date_end = $(this).find('entrydata[name = DateEndShow]').text();
 					var date_start1 = new Date(date_start);
 					var date_start2 = new Date(date_end);
 					var userDate = new Date(date);
-					if ((userDate.getTime() >= date_start1.getTime()) && (userDate.getTime() <= date_start2.getTime())){
+					if (!((userDate.getTime() >= date_start1.getTime()) && (userDate.getTime() <= date_start2.getTime()))){
+						checks = 0;
+					}
+					var cost = $(this).find('entrydata[name = Admission]').text();
+					var parsedCost = cost.split("-");
+					if (!(parsedCost[0]) && !(parsedCost[1]) && checks){	
 						$('.events ul').append($('<li/>', {text: name}));
 					}
-					//$('.events ul').append($('<li/>', {text: name + cost}));
+					
 				});
 			},
 			error: function() {
