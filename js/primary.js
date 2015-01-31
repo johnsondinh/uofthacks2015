@@ -20,9 +20,9 @@ $(document).ready(function() {
 					var date_start1 = new Date(date_start);
 					var date_start2 = new Date(date_start);
 					if (date >= date_start1 && date <= date_start2){
-						text = $(this).text();
+						$('.events ul').append($('<li/>', {text: name + cost}));
 					}
-					$('.events ul').append($('<li/>', {text: name + cost}));
+					//$('.events ul').append($('<li/>', {text: name + cost}));
 				});
 			},
 			error: function() {
