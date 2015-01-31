@@ -26,6 +26,8 @@ $(document).ready(function() {
 					var cost = $(this).find('entrydata[name = Admission]').text();
 					var parseCost = cost.split('-');
 					var priceCheck = 1;
+					var budget = budget.replace("$", "");
+					var budget = parseInt(budget, 10);
 					if (checks){	
 						if (parseCost[0] == ""){
 							priceCheck = 1;
@@ -33,7 +35,7 @@ $(document).ready(function() {
 						else if (parseCost.length >= 1){  //check if it's one number or a range
 							var lowerBound = parseCost[0].replace("$","");
 							var lowerBound = lowerBound.replace("+","");
-							var floatNumber = lowerBound.parseFloat(lowerBound);
+							var floatNumber = parseInt(lowerBound,10);
 							if(floatNumber >= budget){
 								priceCheck = 0;
 							}
