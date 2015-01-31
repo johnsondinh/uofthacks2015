@@ -12,6 +12,7 @@ $(document).ready(function() {
 			url: 'xml/events.xml',
 			dataType: 'xml',
 			success: function(data) {
+				alert(1);
 				$(data).find('viewentries viewentry').each(function() {
 					var entry = $(this).find('entrydata[name = EventName]').text();
 
@@ -20,6 +21,7 @@ $(document).ready(function() {
 			},
 			error: function() {
 				$('.events').text('Failed to get data!');
+				alert(2);
 			}
 		});
 	});		
