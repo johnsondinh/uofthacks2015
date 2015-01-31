@@ -16,7 +16,7 @@ $(document).ready(function() {
 					//var name = $(this).find('entrydata[name = EventName]').text();
 					//var cost = $(this).find('entrydata[name = Admission]').text();
 					var test = new Date('March 7, 2014');
-					('.events ul').append($('<li/>', {text: test + cost}));
+					$('.events ul').append($('<li/>', {text: test}));
 					/*var date_start = $(this).find('entrydata[name = DateBeginShow]');
 					var date_end = $(this).find('entrydata[name = DateEndShow]');
 					var date_start1 = new Date(date_start);
