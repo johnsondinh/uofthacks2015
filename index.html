@@ -29,20 +29,21 @@
 						<input class = "form-control" id = "date" placeholder = "Enter date: ">
 					</div>
 
-					<input type = "submit" id = "submit1" class = "btn btn-info">Submit</button>
+					<button type = "submit" id = "submit1" class = "btn btn-info">Submit</button>
 				</form>
 			</div>
 		</div>
 		
 		<script>
 		$(document).ready(function(){
-			$("#submit1").on('click', function(){
+			$("#submit1").on('click', function(event){
 				var x, budget, date;
 				x = document.getElementById("form1");
 				budget = x.elements["budget"].value;
 				date = x.elements["date"].value;
 				document.getElementById("displayB").innerHTML = budget;
 				document.getElementById("displayD").innerHTML += date;
+				event.preventDefault();
 				/*alert(budget);*/
 			});		
 		});
