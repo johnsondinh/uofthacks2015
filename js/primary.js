@@ -27,7 +27,7 @@ $(document).ready(function() {
 					var parsedCost = cost.split("-");
 					
 					if (checks){	
-						$('.events ul').append($('<li/>', {text: name}));
+						$('.events ul').append($('<li/>', {text: parsedCost[0]}));
 					}
 					
 				});
