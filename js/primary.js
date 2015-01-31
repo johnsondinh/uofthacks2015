@@ -3,17 +3,23 @@ $.ajax({
 	dataType: 'xml',
 	success: function(data) {
 		$(data).find('viewentries viewentry').each(function() {
-
-			var entry = $(this).find('entrydata[name = EventName]').text();
-
-			$('.events ul').append(
-				$('<li />', {
-					text: entry
-				})
-			);
-		});
+			// Do nothing.
+		}		
 	},
 	error: function() {
 		$('.events').text('Failed to get data!');
 	}
 });
+
+
+function nothing() {
+	var budget, date;
+	budget = document.getElementById("form1").elements["budget"].value;
+	date = document.getElementById("form2").elements["date"].value;
+
+	$('.events ul').append(
+			$({
+				text: budget
+			})
+		)
+}
