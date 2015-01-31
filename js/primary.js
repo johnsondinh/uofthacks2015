@@ -8,7 +8,7 @@ $(document).ready(function() {
 		date = x.elements["date"].value;
 		document.getElementById("displayBudget").innerHTML = '$' + budget + '.00';
 		document.getElementById("displayDate").innerHTML = date;
-		document.getElementByID("events").innerHTML = '';
+		document.getElementById("events").innerHTML = '';
 		event.preventDefault();
 
 		$.ajax({
