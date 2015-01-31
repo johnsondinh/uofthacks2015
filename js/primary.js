@@ -1,12 +1,12 @@
 $.ajax({
-	url: 'xml/events.xmll',
+	url: 'xml/events.xml',
 	dataType: 'xml',
 	success: function(data) {
 		$(data).find('viewentries viewentry').each(function() {
-			var entry = $(this).find('entrydata').attr('EventName').text();
+			var entry = $(this).find('viewentry[name = EventName > text').text();
 
 			$('.events ul').append($('<li />', {
-				text:entry
+				text: entry
 			}))
 
 		});
