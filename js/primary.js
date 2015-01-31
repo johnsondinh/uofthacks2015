@@ -28,6 +28,7 @@ $(document).ready(function() {
 					var priceCheck;
 					if (checks){	
 						if (parseCost[0] == ""){
+							$('.events ul').append($('<li/>', {text: name}));
 							priceCheck = 1;
 						}
 						else if (parseCost.length == 1){  //check if it's one number or a range
@@ -48,7 +49,7 @@ $(document).ready(function() {
 						}
 						
 					}
-					if (priceCheck){
+					if (checks && priceCheck){
 						$('.events ul').append($('<li/>', {text: name + cost}));
 					}
 					
