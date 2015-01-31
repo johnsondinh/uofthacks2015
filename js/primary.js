@@ -13,9 +13,10 @@ $(document).ready(function() {
 			dataType: 'xml',
 			success: function(data) {
 				$(data).find('viewentry').each(function() {
-					var entry = $(this).find('entrydata[name = EventName]').text();
+					var name = $(this).find('entrydata[name = EventName]').text();
+					var cost = $(this).find('entrydata[name = Admission]').text();
 
-					$('.events ul').append($('<li/>', {text: entry}));
+					$('.events ul').append($('<li/>', {text: 'Event: ' + name}, <br>, {text: 'Cost: ' + cost}));
 				});
 			},
 			error: function() {
@@ -24,18 +25,3 @@ $(document).ready(function() {
 		});
 	});		
 });
-
-/*$.ajax({
-	url: 'xml/events.xml',
-	dataType: 'xml',
-	success: function(data) {
-		$(data).find('viewentry').each(function() {
-			var entry = $(this).find('entrydata[name = EventName]').text();
-
-			$('.events ul').append($('<li/>', {text: entry}));
-		});
-	},
-	error: function() {
-		$('.events').text('Failed to get data!');
-	}
-});*/
