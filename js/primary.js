@@ -7,7 +7,9 @@ $(document).ready(function() {
 		document.getElementById("displayBudget").innerHTML = '$' + budget + '.00';
 		document.getElementById("displayDate").innerHTML = date;
 		event.preventDefault();
-	});		
+
+		$('result_toggle').toggle();
+	});
 });
 
 $.ajax({
