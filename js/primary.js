@@ -57,7 +57,7 @@ $(document).ready(function() {
 						}
 
 						$('.events ul').append($('<h3/>', {text: name}));
-						$('.events u1').append(' | ');
+						$('.events u1').append($(' | ');
 						$('.events ul').append($({text: cost}));
 						$('.events ul').append($('<p/>', {text: desc}));
 					}
