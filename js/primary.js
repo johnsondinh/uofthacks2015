@@ -20,7 +20,7 @@ $(document).ready(function() {
 					var date_start1 = new Date(date_start);
 					var date_start2 = new Date(date_end);
 					var userDate = new Date(date);
-					if (userDate > date_start1 && userDate < date_start2){
+					if ((userDate.getTime() >= date_start1.getTime()) && (userDate.getTime() < date_start2.getTime())){
 						$('.events ul').append($('<li/>', {text: name}));
 					}
 					//$('.events ul').append($('<li/>', {text: name + cost}));
