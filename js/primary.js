@@ -1,6 +1,6 @@
 $(document).ready(function() {
-	$("#submit1").on('click', function(event, data) {
-		var x, budget, date, y, budget2, month2, date2;
+	$("#submit1").on('click', function(event) {
+		var x, budget, date;
 		x = document.getElementById("form1");
 		budget = x.elements["budget"].value;
 		date = x.elements["date"].value;
@@ -8,15 +8,17 @@ $(document).ready(function() {
 		document.getElementById("displayDate").innerHTML = date;
 		event.preventDefault();
 
-		$(data).find('viewentries viewentry').each(function() {
-			var entry = $(this).find(['name = EventName']).text();
+		function(data) {
+			$(data).find('viewentries viewentry').each(function() {
+				var entry = $(this).find(entrydata['name = EventName']).text();
 
-			$('.results ul').append(
-				$('<li/>', {
-					text: entry
-				})
-			);
-		});
+				$('.events ul').append(
+					$('<li/>', {
+						text: entry
+					})
+				);
+			});	
+		};
 	});
 });
 
