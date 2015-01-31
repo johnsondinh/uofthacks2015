@@ -11,10 +11,21 @@ $.ajax({
 	}
 });
 
+$(document).ready(function() {
+	$("submit").on('click', function(){
+		alert("Submitted!");
+	});
+	var budget, date;
+	budget = document.getElementById("form1").elements["budget"].value;
+	date = document.getElementById("form2").elements["date"].value;
 
-$function nothing() {
+	document.getElementById("display").innerHTML = budget + " is your budget.";
+});
+
+/*
+function nothing() {
 	var budget, date;
 	budget = document.getElementById("form1").elements["budget"].value;
 	date = document.getElementById("form2").elements["date"].value;
 	alert(1);
-};
+}*/)
