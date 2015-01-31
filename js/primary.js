@@ -15,12 +15,12 @@ $(document).ready(function() {
 				$(data).find('viewentry').each(function() {
 					var name = $(this).find('entrydata[name = EventName]').text();
 					//var cost = $(this).find('entrydata[name = Admission]').text();
-					var date_start = $(this).find('entrydata[name = DateBeginShow]');
-					var date_end = $(this).find('entrydata[name = DateEndShow]');
+					var date_start = $(this).find('entrydata[name = DateBeginShow]').text();
+					var date_end = $(this).find('entrydata[name = DateEndShow]').text();
 					var date_start1 = new Date(date_start);
 					var date_start2 = new Date(date_end);
 					var userDate = new Date(date);
-					if ((userDate.getTime() >= date_start1.getTime()) && (userDate.getTime() < date_start2.getTime())){
+					if ((userDate.getTime() >= date_start1.getTime()) && (userDate.getTime() <= date_start2.getTime())){
 						$('.events ul').append($('<li/>', {text: name}));
 					}
 					//$('.events ul').append($('<li/>', {text: name + cost}));
