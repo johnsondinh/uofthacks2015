@@ -18,8 +18,8 @@ function nothing() {
 	date = document.getElementById("form2").elements["date"].value;
 
 	$('.events ul').append(
-			$({
-				text: budget
-			})
-		)
-}
+		$('<li />', {
+			text: budget
+		})
+	);
+};
