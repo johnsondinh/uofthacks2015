@@ -34,7 +34,7 @@ $(document).ready(function() {
 					var priceCheck = 1;					
 
 					if (checks) {	
-						if (parseCost[0] == "") {
+						if (!parseCost) {
 							priceCheck = 1;
 						}
 
@@ -54,7 +54,7 @@ $(document).ready(function() {
 
 						$(".events ul").append('<strong>' + name + '</strong>');
 						
-						if(parseCost[0] == "") {
+						if(!parseCost) {
 							$(".events ul").append('<h4>No pricing information available.</h4>');
 						}
 
