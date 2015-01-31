@@ -30,6 +30,7 @@ $(document).ready(function() {
 					var parseCost = cost.split('-');
 					var priceCheck = 1;
 
+					$('.events u1').append('JUST TELL ME WHY');
 					$('.events ul').append($({text: budget}));
 
 					budget = budget.replace(/\$/g, '');
