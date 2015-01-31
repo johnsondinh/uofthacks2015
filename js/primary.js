@@ -51,17 +51,11 @@ $(document).ready(function() {
 
 					if (checks && priceCheck) {
 						var desc = $(this).find('entrydata[name = LongDesc]').text();
+						var organization = $(this).find('entrydata[name = PresentedByOrgName]').text();
 
-						$(".events ul").append('<strong>' + name + '</strong>');
-						
-						if(cost == "") {
-							$(".events ul").append('<h4>No pricing information available.</h4>');
-						}
-
-						else {
-							$(".events ul").append('<h4>' + cost + '</h4>');
-						}
-
+						$(".events ul").append('<strong>' + name + '</strong>, presented by: ' + );
+						$(".events ul").append('<strong>Presented by: ' + organization + '</strong>');
+						$(".events ul").append('<h4>' + cost + '</h4>');
 						$(".events ul").append('<h4>' + desc + '</h4>');
 					}
 				});
