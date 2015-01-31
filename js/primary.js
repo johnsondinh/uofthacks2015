@@ -10,17 +10,17 @@ $.ajax({
 		$('.events').text('Failed to get data!');
 	}
 });
-
+/*
 $(document).ready(function(){
 		$("#submit1").on('click', function(){
 			var x, budget, date;
 			x = document.getElementById("form1");
 			budget = x.elements["budget"].value;
 			document.getElementById("display").innerHTML = budget + " is your budget.";
-			/*alert(budget);*/
+			/*alert(budget);
 		});		
 });
-
+*/
 /*
 function nothing() {
 	var budget, date;
