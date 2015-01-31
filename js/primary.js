@@ -9,12 +9,12 @@ $(document).ready(function() {
 		event.preventDefault();
 
 		$.ajax({
-			url: 'xml/events.xml',
+			url: 'xml/events.xmll',
 			dataType: 'xml',
 			success: function(data) {
 				$(data).find('viewentries viewentry').each(function() {
 					var entry = $(this).find('entrydata[name = EventName').text();
-					alert(1);
+
 					$('.events jumbotron ul').append($('<li>', {text: entry}));
 				});
 			},
