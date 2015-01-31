@@ -60,10 +60,10 @@ $(document).ready(function() {
 						$('.events ul h3').text(name);
 
 						$('.events ul').append($('<h4/>'));
-						$('.events ul h3').text(cost);
+						$('.events ul h4').text(cost);
 
 						$('.events ul').append($('<p/>'));
-						$('.events ul h3').text(desc);
+						$('.events ul p').text(desc);
 					}
 				});
 			},
