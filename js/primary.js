@@ -16,7 +16,7 @@ $(document).ready(function() {
 					var name = $(this).find('entrydata[name = EventName]').text();
 					var cost = $(this).find('entrydata[name = Admission]').text();
 
-					$('.events ul').append($('<li/>', {text: 'Event: ' + name}, <br>, {text: 'Cost: ' + cost}));
+					$('.events ul').append($('<li/>', {text: 'Event: ' + name}));
 				});
 			},
 			error: function() {
