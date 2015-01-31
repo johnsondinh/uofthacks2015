@@ -52,13 +52,14 @@ $(document).ready(function() {
 					if (checks && priceCheck) {
 						var desc = $(this).find('entrydata[name = LongDesc]').text();
 
+						var sep = ' | ';
+
 						if(parseCost[0] == "") {
 							cost = "No pricing available.";
 						}
 
 						$('.events ul').append($('<h3/>', {text: name}));
-						$('.events u1').append($(' | ');
-						$('.events ul').append($({text: cost}));
+						$('.events ul').append($({text: sep + cost}));
 						$('.events ul').append($('<p/>', {text: desc}));
 					}
 				});
