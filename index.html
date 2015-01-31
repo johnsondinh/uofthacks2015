@@ -29,36 +29,33 @@
 						<input class = "form-control" id = "date" placeholder = "Enter date: ">
 					</div>
 
-					<!--<div class = "form-group">
-						<label>Date</label>
-						<input class = "form-control" id = "form2" placeholder = "Enter date: ">
-					</div>-->
-
 					<button type = "submit" id = "submit1" class = "btn btn-info">Submit</button>
 				</form>
 			</div>
 		</div>
 		
 		<script>
-		/*$(document).ready(function(){*/
-		$("#submit1").on('click', function(){
-			var x, budget, date;
-			x = document.getElementById("form1");
-			budget = x.elements["budget"].value;
-			date = x.elements["date"].value;
-			document.getElementById("display").innerHTML = budget + " is your budget.";
-			document.getElementById("display").innerHTML += date + " is your date.";
-			/*alert(budget);*/
-		});		
-		/*});*/
+		$(document).ready(function(){
+			$("#submit1").on('click', function(){
+				var x, budget, date;
+				x = document.getElementById("form1");
+				budget = x.elements["budget"].value;
+				date = x.elements["date"].value;
+				document.getElementById("displayB").innerHTML = budget + " is your budget.<br>";
+				document.getElementById("displayD").innerHTML += date + " is your date.";
+				/*alert(budget);*/
+			});		
+		});
 		</script>
 		
 
 		<div class = "container">
 			<div class = "span12">
 				<div class = "jumbotron">
-					<h4>Results?</h4>
-					<h4 id = "display"></h4>
+					<h4>Your budget: </h4>
+					<h4 id = "displayB"><br></h4>
+					<h4>Date Chosen: </h4>
+					<h4 id = "displayD"><br></h4>
 					<ul></ul>
 				</div>
 			</div>
