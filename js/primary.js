@@ -26,7 +26,28 @@ $(document).ready(function() {
 					var cost = $(this).find('entrydata[name = Admission]').text();
 					var parsedCost = cost.split('-');
 					
-					if (checks){	
+					if (!checks){
+					    var high, low;	
+						if (parseCost[0] == ""){
+							priceCheck = 1;
+						}
+						else if (parseCost.length == 1){
+							if(budget <= parseCost[0]){
+								priceCheck = 1;
+							}
+							else{
+								priceCheck = 0;
+							}
+						}
+						else{
+							if (parseCost[0] <= budget && budget <= parseCost[1]){
+								priceCheck = 1;
+							}
+							else{
+								priceCheck = 0;
+							}
+						}
+						
 						$('.events ul').append($('<li/>', {text: parsedCost[0]}));
 					}
 					
