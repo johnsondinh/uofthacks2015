@@ -7,10 +7,25 @@ $(document).ready(function() {
 		document.getElementById("displayBudget").innerHTML = '$' + budget + '.00';
 		document.getElementById("displayDate").innerHTML = date;
 		event.preventDefault();
+
+		$.ajax({
+			url: 'xml/events.xml',
+			dataType: 'xml',
+			success: function(data) {
+				$(data).find('viewentries viewentry').each(function() {
+					var entry = $(this).find('entrydata[name = EventName]').text();
+
+					$('.events jumbotron ul').append($('<li/>', {text: entry}));
+				});
+			},
+			error: function() {
+				$('.events').text('Failed to get data!');
+			}
+		});
 	});		
 });
 
-$.ajax({
+/*$.ajax({
 	url: 'xml/events.xml',
 	dataType: 'xml',
 	success: function(data) {
@@ -23,4 +38,4 @@ $.ajax({
 	error: function() {
 		$('.events').text('Failed to get data!');
 	}
-});
+});*/
