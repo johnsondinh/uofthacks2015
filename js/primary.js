@@ -59,7 +59,7 @@ $(document).ready(function() {
 						}
 
 						$('.events ul').append($('<h3/>', {text: name}));
-						$('.events ul').append($({text: sep + cost}));
+						$('.events ul').append($('', {text: sep + cost}));
 						$('.events ul').append($('<p/>', {text: desc}));
 					}
 				});
