@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	$("#submit1").on('click', function(event) {
+		location.reload();
 		var x, budget, date;
 		x = document.getElementById("form1");
 		budget = x.elements["budget"].value;
