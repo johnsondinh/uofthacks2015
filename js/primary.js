@@ -2,7 +2,7 @@ $.ajax({
 	url: 'xml/events.xml',
 	dataType: 'xml',
 	success: function(data) {
-		$(data).find('viewentry').each(function() {
+		$(data).find('viewentries viewentry').each(function() {
 
 			var entry = $(this).find('entrydata[name = EventName]').text();
 
