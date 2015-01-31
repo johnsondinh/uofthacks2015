@@ -3,6 +3,7 @@ $.ajax({
 	dataType: 'xml',
 	success: function(data) {
 		$(data).find('viewentries viewentry').each(function() {
+
 			var entry = $(this).find('viewentry[position = 1] > text').text();
 
 			$('.events ul').append($('<li />', {
