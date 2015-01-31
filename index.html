@@ -39,8 +39,9 @@
 		</div>
 		<script>
 		$(document).ready(function(){		
-		var budget, date;
-		budget = document.getElementById("form1").elements["budget"].value;
+		var x, budget, date;
+		x = document.getElementById("form1");
+		budget = x.elements["budget"].value;
 		document.getElementById("display").innerHTML = budget + " is your budget.";
 		alert('submitted');
 		document.write("abc");
