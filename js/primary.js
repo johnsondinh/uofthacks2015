@@ -17,9 +17,5 @@ function nothing() {
 	budget = document.getElementById("form1").elements["budget"].value;
 	date = document.getElementById("form2").elements["date"].value;
 
-	$('.events ul').append(
-		$('<li />', {
-			text: budget
-		})
-	);
+	document.getElementById("display").innerHTML = budget + " is your budget.";
 };
