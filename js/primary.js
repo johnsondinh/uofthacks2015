@@ -30,10 +30,14 @@ $(document).ready(function() {
 					var parseCost = cost.split('-');
 					var priceCheck = 1;
 
+					$('.events ul').append($({text: budget}));
+
 					budget = budget.replace(/\$/g, '');
 					budget = parseInt(budget, 10);
 
-					if (checks) {	
+					$('.events ul').append($({text: budget}));
+
+					/*if (checks) {	
 						if (parseCost[0] == "") {
 							priceCheck = 1;
 						}
@@ -51,7 +55,7 @@ $(document).ready(function() {
 
 					if (checks && priceCheck) {
 						$('.events ul').append($('<li/>', {text: name + cost}));
-					}
+					}*/
 				});
 			},
 			error: function() {
