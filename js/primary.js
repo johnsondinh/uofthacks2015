@@ -7,19 +7,7 @@ $(document).ready(function() {
 		document.getElementById("displayBudget").innerHTML = '$' + budget + '.00';
 		document.getElementById("displayDate").innerHTML = date;
 		event.preventDefault();
-
-		function(data) {
-			$(data).find('viewentries viewentry').each(function() {
-				var entry = $(this).find(entrydata['name = EventName']).text();
-
-				$('.events ul').append(
-					$('<li/>', {
-						text: entry
-					})
-				);
-			});	
-		};
-	});
+	});		
 });
 
 $.ajax({
