@@ -26,7 +26,7 @@ $(document).ready(function() {
 					var cost = $(this).find('entrydata[name = Admission]').text();
 					var parseCost = cost.split('-');
 					var priceCheck = 1;
-					var budget = budget.replace("$", "");
+					budget = budget.replace("$", "");
 					budget = parseInt(budget, 10);
 					if (checks){	
 						if (parseCost[0] == ""){
