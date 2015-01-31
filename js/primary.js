@@ -4,8 +4,8 @@ $(document).ready(function() {
 		x = document.getElementById("form1");
 		budget = x.elements["budget"].value;
 		date = x.elements["date"].value;
-		document.getElementById("displayB").innerHTML = '$' + budget + '.00';
-		document.getElementById("displayD").innerHTML = date;
+		document.getElementById("displayBudget").innerHTML = '$' + budget + '.00';
+		document.getElementById("displayDate").innerHTML = date;
 		event.preventDefault();
 	});		
 });
