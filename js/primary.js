@@ -2,15 +2,15 @@ $.ajax({
 	url: 'xml/events.xml',
 	dataType: 'xml',
 	success: function(data) {
-		$(data).find('viewentries viewentry').each(function() {
+		$(data).find('viewentry').each(function() {
 
-			var entry = $(this).entrydata.attr('name');
-			//var eventName = $entry>text;
+			var entry = $(this).find('entrydata[name = EventName]').text();
 
-			$('.events ul').append($('<li />', {
-				text: entry
-			}))
-
+			$('.events ul').append(
+				$('<li />', {
+					text: entry
+				})
+			);
 		});
 	},
 	error: function() {
