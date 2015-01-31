@@ -52,13 +52,17 @@ $(document).ready(function() {
 					if (checks && priceCheck) {
 						var desc = $(this).find('entrydata[name = LongDesc]').text();
 
+						$(".events ul").append('<strong>' + name + '</strong>');
+						
 						if(parseCost[0] == "") {
-							cost = "No pricing available.";
+							$(".events ul").append('<h4>No pricing information available.</h4>');
 						}
 
-						$(".events ul").append('<strong><h3>' + name + '</h3></strong>');
-						$(".events ul").append('<br><h4>' + cost + '</h4>');
-						$(".events ul").append('<br><p>' + desc + '</p>');
+						else {
+							$(".events ul").append('<h4>' + cost + '</h4>');
+						}
+
+						$(".events ul").append('<h4>' + desc + '</h4>');
 					}
 				});
 			},
