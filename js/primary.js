@@ -14,8 +14,8 @@ $(document).ready(function() {
 			success: function(data) {
 				$(data).find('viewentries viewentry').each(function() {
 					var entry = $(this).find('entrydata[name = EventName').text();
-
-					$('.events ul').append($('<li>', {text: entry}));
+					alert(1);
+					$('.events jumbotron ul').append($('<li>', {text: entry}));
 				});
 			},
 			error: function() {
