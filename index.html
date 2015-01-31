@@ -45,7 +45,9 @@
 			var x, budget, date;
 			x = document.getElementById("form1");
 			budget = x.elements["budget"].value;
+			date = x.elements["date"].value;
 			document.getElementById("display").innerHTML = budget + " is your budget.";
+			document.getElementById("display").innerHTML = date + " is your budget.";
 			alert(budget);
 		});		
 		});
@@ -56,7 +58,7 @@
 			<div class = "span12">
 				<div class = "jumbotron">
 					<h4>Results?</h4>
-					<p id = "display"></p>
+					<h4 id = "display"></h4>
 					<ul></ul>
 				</div>
 			</div>
