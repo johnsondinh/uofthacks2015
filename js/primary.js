@@ -60,9 +60,7 @@ $(document).ready(function() {
 						var intersectionInfo = $(this).find('entrydata[name = Intersection]').text().trim();
 						
 						if(intersectionInfo != 'and') {
-							str += '<li id=\'li' + i + '\'>' + array[i] + '</li>';
-
-							var str1 = '<button type = "button" class = "btn btn-info" data-toggle = "collapse" data-target = "google">Show Map</button>';
+							var str1 = '<button type = "button" class = "btn btn-info" data-toggle = "collapse" data-target = "#google">Show Map</button>';
 							var str2 = '<div id = "google" class = "collapse">Hello, world!</div>'; // Insert the Google Map here.
 
 							$(".events ul").append(str1);
