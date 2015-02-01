@@ -11,11 +11,10 @@
 		<script>
 			function initialize() {
 			  var mapProp = {
-			    center: new google.maps.LatLng(51.508742, -0.120850),
-			    zoom: 5,
-			    mapTypeId: google.maps.MapTypeId.ROADMAP
+			    center:new google.maps.LatLng(51.508742,-0.120850),
+			    zoom:5,
+			    mapTypeId:google.maps.MapTypeId.ROADMAP
 			  };
-
 			  var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 			}
 
@@ -48,11 +47,11 @@
 			</div>
 		</div>
 
-		<div id = "googleMap"></div>
+		<div id = "googleMap" style="width:500px;height:380px;"></div>
 
 		<div class = "container">
 			<div class = "jumbotron">
-				<h1>Small</h1>
+				<h1>Map?!</h1>
 				<h2>Your budget:</h2>
 				<p id = "displayBudget"></p>
 				<h2>Date chosen:</h2>
