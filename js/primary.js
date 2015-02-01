@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	$("#submit1").on('click', function(event) {
 		var x, budget, date;
-		var count = 1;
+		// var count = 1;
 		x = document.getElementById("form1");
 		budget = x.elements["budget"].value;
 		budget = budget.replace(/\$/g, '');
@@ -57,18 +57,18 @@ $(document).ready(function() {
 						$(".events ul").append('<h3>' + name + ', hosted by: ' + organization + '</h3>');
 						$(".events ul").append('<h4>' + cost + '</h4>');
 						$(".events ul").append('<h4>' + desc + '</h4>');
-						$(".events ul").append('<h4>' + count + '</h4>');
+						// $(".events ul").append('<h4>' + count + '</h4>');
 						
 						var intersectionInfo = $(this).find('entrydata[name = Intersection]').text().trim();
 						
 						if(intersectionInfo != 'and') {
-							/*var str1 = '<button type = "button" class = "btn btn-info" data-toggle = "collapse" data-target = "#' + count + '">Show Map</button>';
-							var str2 = '<div id = "' + count + '" class = "collapse">Hello, world!</div>'; // Insert the Google Map here.
+							var str1 = '<button type = "button" class = "btn btn-info" data-toggle = "collapse" data-target = "#' + 1 + '">Show Map</button>';
+							var str2 = '<div id = "' + 1 + '" class = "collapse">Hello, world!</div>'; // Insert the Google Map here.
 
 							$(".events ul").append(str1);
-							$(".events ul").append(str2);*/
+							$(".events ul").append(str2);
 
-							count = 2;
+							// count = 2;
 						}
 					}
 				});
