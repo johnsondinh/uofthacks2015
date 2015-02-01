@@ -15,8 +15,6 @@ $(document).ready(function() {
 			url: 'xml/events.xml',
 			dataType: 'xml',
 			success: function(data) {
-				var count = 1;
-				var count_str = '1';
 				$(data).find('viewentry').each(function() {
 					var checks = 1;
 					var name = $(this).find('entrydata[name = EventName]').text();
@@ -58,24 +56,18 @@ $(document).ready(function() {
 						$(".events ul").append('<h3>' + name + ', hosted by: ' + organization + '</h3>');
 						$(".events ul").append('<h4>' + cost + '</h4>');
 						$(".events ul").append('<h4>' + desc + '</h4>');
-						$(".events ul").append('<h4>' + count_str + '</h4>');
 						
 						var intersectionInfo = $(this).find('entrydata[name = Intersection]').text().trim();
-
-						count++;
-						count_str += '1';
 						
-						/*if(intersectionInfo != 'and') {
+						if(intersectionInfo != 'and') {
 							str += '<li id=\'li' + i + '\'>' + array[i] + '</li>';
 
-							var str1 = '<button type = \'button\' class = \'btn btn-info\' data-toggle = \'collapse\' data-target = \'#' + count + '\'>Show Map</button>';
-							var str2 = '<div id = \'li' + count + '\' class = \'collapse\'>Hello, world!</div>'; // Insert the Google Map here.
+							var str1 = '<button type = "button" class = "btn btn-info" data-toggle = "collapse" data-target = "google">Show Map</button>';
+							var str2 = '<div id = "google" class = "collapse">Hello, world!</div>'; // Insert the Google Map here.
 
 							$(".events ul").append(str1);
 							$(".events ul").append(str2);
-
-							count++;
-						}*/
+						}
 					}
 				});
 			},
