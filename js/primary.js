@@ -57,12 +57,9 @@ $(document).ready(function() {
 						$(".events ul").append('<h4>' + cost + '</h4>');
 						$(".events ul").append('<h4>' + desc + '</h4>');
 						
-						var intersectionInfo = $(this).find('entrydata[name = Intersection]').text().trim();
+						var mapInfo = $(this).find('entrydata[name = MapAddress]').text().replace('[', '').replace(']', '').trim();
 						
-						if(intersectionInfo != 'and') {
-							$(".events ul").append('<button type = "button" class = "btn btn-info" data-toggle = "collapse" data-target = "#1">Show Map</button>');
-							$(".events ul").append('<div id = "1" class = "collapse">Hello, world!</div>');
-						}
+						$(".events ul").append(mapInfo);
 					}
 				});
 			},
