@@ -72,7 +72,7 @@ $(document).ready(function() {
 		});
 	});
 
-	$('body').on('click.collapse-next.data-api', '[data-toggle = collapse-next]', function(e) {
+	$('.events ul btn btn-info').on('click.collapse-next.data-api', '[data-toggle = collapse-next]', function(e) {
 		var $target = $(this).parent().next()
 		$target.data('collapse') ? $target.collapse('toggle') : $target.collapse()
 	})
