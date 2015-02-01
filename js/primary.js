@@ -60,11 +60,11 @@ $(document).ready(function() {
 						var intersectionInfo = $(this).find('entrydata[name = Intersection]').text().trim();
 						
 						if(intersectionInfo != 'and') {
-							var str1 = '<button type = "button" class = "btn btn-info" data-toggle = "collapse" data-target = "#google">Show Map</button>';
-							var str2 = '<div id = "google" class = "collapse">Hello, world!</div>'; // Insert the Google Map here.
+							$(".events ul").append('<button type = "button" class = "btn btn-info" data-toggle = "collapse" data-target = "#google">Show Map</button>');
+							$(".events ul").append('<div id = "google" class = "collapse">Hello, world!</div>');
+      						//<div id = "google" class = "collapse">Hello, world!</div>');*/
 
-							$(".events ul").append(str1);
-							$(".events ul").append(str2);
+      						$(".events ul").append('<h4>' + intersectionInfo + '</h4>');
 						}
 					}
 				});
@@ -73,7 +73,5 @@ $(document).ready(function() {
 				$('.events').text('Failed to get data!');
 			}
 		});
-	});
-
-	
-
+	});		
+});
