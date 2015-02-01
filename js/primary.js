@@ -57,11 +57,13 @@ $(document).ready(function() {
 						$(".events ul").append('<h3>' + name + ', hosted by: ' + organization + '</h3>');
 						$(".events ul").append('<h4>' + cost + '</h4>');
 						$(".events ul").append('<h4>' + desc + '</h4>');
-						// $(".events ul").append('<h4>' + count + '</h4>');
+						$(".events ul").append('<h4>' + count + '</h4>');
 						
 						var intersectionInfo = $(this).find('entrydata[name = Intersection]').text().trim();
+
+						count++;
 						
-						if(intersectionInfo != 'and') {
+						/*if(intersectionInfo != 'and') {
 							str += '<li id=\'li' + i + '\'>' + array[i] + '</li>';
 
 							var str1 = '<button type = \'button\' class = \'btn btn-info\' data-toggle = \'collapse\' data-target = \'#' + count + '\'>Show Map</button>';
@@ -71,7 +73,7 @@ $(document).ready(function() {
 							$(".events ul").append(str2);
 
 							count++;
-						}
+						}*/
 					}
 				});
 			},
