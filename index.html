@@ -37,19 +37,32 @@
 
 		<div class = "container">
 			<div class = "jumbotron">
-				<h1>Map</h1>
+				<h1>Map?</h1>
 				<h2>Your budget:</h2>
 				<p id = "displayBudget"></p>
 				<h2>Date chosen:</h2>
 				<p id = "displayDate"></p>
 				<h2>Events:</h2>
 				<div class = "events">
+					<div id = "googleMap"></div>
 					<ul id = "events"></ul>
 				</div>
 			</div>
 		</div>
 		
-		
 		<script src = "js/primary.js"></script>
+		<script>
+			function initialize() {
+			  var mapProp = {
+			    center: new google.maps.LatLng(51.508742, -0.120850),
+			    zoom: 5,
+			    mapTypeId: google.maps.MapTypeId.ROADMAP
+			  };
+
+			  var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+			}
+
+			google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
 	</body>
 </html>
