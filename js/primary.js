@@ -57,9 +57,9 @@ $(document).ready(function() {
 						$(".events ul").append('<h4>' + cost + '</h4>');
 						$(".events ul").append('<h4>' + desc + '</h4>');
 						
-						var intersectionInfo = $(this).find('entrydata[name = Intersection]').text();
+						var intersectionInfo = $(this).find('entrydata[name = Intersection]').text().trim();
 						
-						if(intersectionInfo != "and") {
+						if(intersectionInfo != 'and') {
 							$(".events ul").append('<button type = "button" class = "btn btn-info" data-toggle = "collapse" data-target = "#google">Show Map</button>');
 							$(".events ul").append('<div id = "google" class = "collapse">Hello, world!</div>');
       						//<div id = "google" class = "collapse">Hello, world!</div>');*/
