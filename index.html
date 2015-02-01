@@ -7,32 +7,6 @@
 		<link href = "css/styles.css" rel = "stylesheet">
 		<script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script src = "js/bootstrap.js"></script>
-		<script> // All credits to: http://www.java2s.com/Code/JavaScript/Development/functionloadstheXMLdocumentfromthespecifiedURL.htm
-			// This function loads the XML document from the specified URL, and when
-			// it is fully loaded, passes that document and the url to the specified
-			// handler function.  This function works with any XML document.
-
-			function loadXML(url, handler) {
-			    // Use the standard DOM Level 2 technique, if it is supported
-			    if (document.implementation && document.implementation.createDocument) {
-			        // Create a new Document object
-			        var xmldoc = document.implementation.createDocument("", "", null);
-			        // Specify what should happen when it finishes loading
-			        xmldoc.onload = function() { handler(xmldoc, url); }.
-			        // And tell it what URL to load
-			        xmldoc.load(url);
-			    }
-
-			    // Otherwise use Microsoft's proprietary API for Internet Explorer
-			    else if (window.ActiveXObject) { 
-			        var xmldoc = new ActiveXObject("Microsoft.XMLDOM");   // Create doc.
-			        xmldoc.onreadystatechange = function() {              // Specify onload.
-			            if (xmldoc.readyState == 4) handler(xmldoc, url);
-			        }
-			        xmldoc.load(url);                                     // Start loading!
-			    }
-			}
-		</script>
 	</head>
 	<body>
 		<div class = "navbar navbar-inverse navbar-static-top">
