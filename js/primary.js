@@ -11,11 +11,8 @@ $(document).ready(function() {
 		document.getElementById("events").innerHTML = '';
 		event.preventDefault();
 
-		var URL = "http://wx.toronto.ca/festevents.nsf/tpaview?readviewentries";
-
 		$.ajax({
-			type: 'POST',
-			url: URL,
+			url: 'xml/events.xml',
 			dataType: 'xml',
 			success: function(data) {
 				$(data).find('viewentry').each(function() {
