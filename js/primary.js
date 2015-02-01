@@ -57,15 +57,13 @@ $(document).ready(function() {
 						$(".events ul").append('<h3>' + name + ', hosted by: ' + organization + '</h3>');
 						$(".events ul").append('<h4>' + cost + '</h4>');
 						$(".events ul").append('<h4>' + desc + '</h4>');
+						$(".events ul").append('<h4>' + count + '</h4>');
 						
 						var intersectionInfo = $(this).find('entrydata[name = Intersection]').text().trim();
 						
 						if(intersectionInfo != 'and') {
-							var str1 = '';
-							var str2 = '';
-
-							str1 += '<button type = "button" class = "btn btn-info" data-toggle = "collapse" data-target = "#' + count + '">Show Map</button>';
-							str2 += '<div id = "' + count + '" class = "collapse">Hello, world!</div>'; // Insert the Google Map here.
+							var str1 = '<button type = "button" class = "btn btn-info" data-toggle = "collapse" data-target = "#' + count + '">Show Map</button>';
+							var str2 = '<div id = "' + count + '" class = "collapse">Hello, world!</div>'; // Insert the Google Map here.
 
 							$(".events ul").append(str1);
 							$(".events ul").append(str2);
