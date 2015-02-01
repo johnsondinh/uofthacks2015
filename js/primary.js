@@ -2,6 +2,7 @@ $(document).ready(function() {
 	$("#submit1").on('click', function(event) {
 		var x, budget, date;
 		var count = 1;
+		count = parseInt(count, 10);
 		x = document.getElementById("form1");
 		budget = x.elements["budget"].value;
 		budget = budget.replace(/\$/g, '');
