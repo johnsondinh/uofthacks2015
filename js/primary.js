@@ -68,7 +68,7 @@ $(document).ready(function() {
 							$(".events ul").append(str1);
 							$(".events ul").append(str2);*/
 
-							count = count + 1;
+							count = 2;
 						}
 					}
 				});
