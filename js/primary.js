@@ -1,6 +1,7 @@
 $(document).ready(function() {
 	$("#submit1").on('click', function(event) {
 		var x, budget, date;
+		var count = 1;
 		x = document.getElementById("form1");
 		budget = x.elements["budget"].value;
 		budget = budget.replace(/\$/g, '');
@@ -60,12 +61,19 @@ $(document).ready(function() {
 						var intersectionInfo = $(this).find('entrydata[name = Intersection]').text().trim();
 						
 						if(intersectionInfo != 'and') {
-							$(".events ul").append('<button type = "button" class = "btn btn-info" data-toggle = "collapse" data-target = "#google">Show Map</button>');
-							$(".events ul").append('<div id = "google" class = "collapse">Hello, world!</div>'); // Insert the map here.
+							var str1 = '';
+							var str2 = '';
+
+							str1 += '<button type = "button" class = "btn btn-info" data-toggle = "collapse" data-target = "#' + count + '">Show Map</button>';
+							str2 += '<div id = "' + count + '" class = "collapse">Hello, world!</div>'; // Insert the Google Map here.
+
+							$(".events ul").append(str1);
+							$(".events ul").append(str2);
+
+							count++;
 						}
 					}
 				});
-				
 			},
 			error: function() {
 				$('.events').text('Failed to get data!');
