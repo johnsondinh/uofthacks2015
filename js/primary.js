@@ -60,7 +60,8 @@ $(document).ready(function() {
 						var intersectionInfo = $(this).find('entrydata[name = Intersection]').text();
 						
 						if(intersectionInfo != "and") {
-							$(".events ul").append('<button type = "button" class = "btn btn-info" data-toggle = "collapse" data-target = "#google">+</button>');
+							$(".events ul").append('<button type = "button" class = "btn btn-info" data-toggle = "collapse" data-target = "#google">Show Map</button>');
+							$(".events ul").append('<div id = "google" class = "collapse">Hello, world!</div>');
       						//<div id = "google" class = "collapse">Hello, world!</div>');*/
 
       						$(".events ul").append('<h4>' + intersectionInfo + '</h4>');
