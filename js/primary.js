@@ -12,7 +12,7 @@ $(document).ready(function() {
 		event.preventDefault();
 
 		$.ajax({
-			url: 'http://wx.toronto.ca/festevents.nsf/tpaview?readviewentries',
+			// url: 'xml/events.xml',
 			dataType: 'xml',
 			success: function(data) {
 				$(data).find('viewentry').each(function() {
