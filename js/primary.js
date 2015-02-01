@@ -61,13 +61,22 @@ $(document).ready(function() {
 						
 						if(intersectionInfo != 'and') {
 							$(".events ul").append('<button type = "button" class = "btn btn-info" data-toggle = "collapse" data-target = "#google">Show Map</button>');
-							$(".events ul").append('<div id = "google" class = "collapse">Hello, world!</div>');
-      						//<div id = "google" class = "collapse">Hello, world!</div>');*/
-
-      						$(".events ul").append('<h4>' + intersectionInfo + '</h4>');
+							$(".events ul").append('<div id = "google" class = "collapse">Hello, world!</div>'); // Insert the map here.
 						}
 					}
+				}
+
+				$(".events ul btn btn-info").each(function(i) {
+					var row = $(this);
+					row.attr('data-target', '#google' + i);
 				});
+
+				$(".events ul google").each(function(i) {
+					var row = $(this);
+					row.attr('id', 'google' + i);
+				});
+
+				);
 			},
 			error: function() {
 				$('.events').text('Failed to get data!');
