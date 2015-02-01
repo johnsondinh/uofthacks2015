@@ -15,8 +15,8 @@ $(document).ready(function() {
 			type: 'GET',
 			url: 'http://wx.toronto.ca/festevents.nsf/tpaview?readviewentries',
 			dataType: 'xml',
-			success: function(data) {
-				$(data).find('viewentry').each(function() {
+			success: function(xml) {
+				$(xml).find('viewentry').each(function() {
 					var checks = 1;
 					var name = $(this).find('entrydata[name = EventName]').text();
 					var date_start = $(this).find('entrydata[name = DateBeginShow]').text();
